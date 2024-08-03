@@ -4,8 +4,8 @@ export default defineNuxtRouteMiddleware(to => {
 	console.log(to.params.type, type);
 	if (typeof type === 'string') {
 		if (!to.params.type) {
-			return navigateTo({ query: q, params: { type } });
+			return navigateTo({ ...to, query: q, params: { type } });
 		}
-		return navigateTo({ query: q });
+		return navigateTo({ ...to, query: q });
 	}
 });

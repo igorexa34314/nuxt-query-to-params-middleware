@@ -8,7 +8,6 @@
 
 <script lang="ts" setup>
 definePageMeta({
-	key: route => route.path + route.query.type,
 	middleware: ['query-to-params'],
 });
 </script>
