@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<h1>Index</h1>
+		<h2>Default behavior</h2>
 		<NuxtLink to="/route-with-param">No param, no query</NuxtLink><br /><br />
 		<NuxtLink :to="{ name: 'route-with-param-type', params: { type: 'foo' } }">Param = "foo", no query</NuxtLink
 		><br /><br />
@@ -11,7 +12,7 @@
 		>
 		<br /><br />
 		<h2>With page reload</h2>
-		<NuxtLink to="/route-with-param" external>No param, no query</NuxtLink><br /><br />
+		<NuxtLink to="/route-with-param" external>No param, no query, page reload</NuxtLink><br /><br />
 		<NuxtLink :to="{ name: 'route-with-param-type', params: { type: 'foo' } }" external
 			>Param = "foo", no query, page reload</NuxtLink
 		><br /><br />
