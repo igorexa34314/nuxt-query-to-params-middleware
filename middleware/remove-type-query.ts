@@ -1,5 +1,5 @@
 // Redirect from 'type' query to 'type' param
-export default defineNuxtRouteMiddleware((to, from) => {
+export default defineNuxtRouteMiddleware(to => {
 	const { type, ...q } = to.query;
 	console.log('from middleware: param =', to.params.type, ';  query =', type);
 	if (type) {
