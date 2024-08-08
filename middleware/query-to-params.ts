@@ -5,7 +5,8 @@ export default defineNuxtRouteMiddleware(to => {
 	if (typeof type === 'string') {
 		if (!to.params.type) {
 			return navigateTo({ ...to, query: q, params: { type } });
+		} else if (import.meta.client) {
+			return navigateTo({ ...to, query: q });
 		}
-		return navigateTo({ ...to, query: q });
 	}
 });
